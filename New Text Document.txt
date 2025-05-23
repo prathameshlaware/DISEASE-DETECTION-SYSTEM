@@ -1,0 +1,27 @@
+
+
+python manage.py makemigrations main_app
+python manage.py makemigrations chats
+pip install -r requirements.txt
+pip install django==3.0.3
+pip install numpy
+pip install scipy
+pip install scikit-learn==0.21.3
+pip install joblib
+pip install psycopg2  # Only if using PostgreSQL
+pip install asgiref
+pip install pytz
+
+
+
+python manage.py makemigrations accounts  # If applicable
+python manage.py migrate
+python manage.py runserver
+
+To create admin
+ python manage.py createsuperuser
+python manage.py migrate
+python manage.py runserver
+
+If password forgot
+python manage.py changepassword <your_admin_username>
